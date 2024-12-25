@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN IN SILENCE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <header>
+       
+        <nav>
+            <ul>
+               
+                <li><button id="showRegister">Register</button></li>
+                <li><button id="showLogin">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="menu">
+       
+        <nav>
+            <ul>
+               
+                <li><button id="showaboutus">About us</button></li>
+                <li><button id="showourmission">Our Mission</button></li>
+                <li><button id="showfaqs">FAQ's</button></li>
+                
+
+            </ul>
+        </nav>
+       
+    </header>
+    <header class="img"><p style="display: inline-block;">
+        <img src="WhatsApp Image 2024-12-24 at 11.06.33 PM.jpeg" height="500%" width="100%" >
+       
+
+    </header>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br>
+    
+        
+    
+    
+    <section id="home" class="container">
+        <h2></h2>
+        <p></p>
+    </section>
+
+    <section id="register" class="container hidden">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <select required>
+                <option value="" disabled selected>Select Disability</option>
+                <option value="Deaf">Deaf</option>
+                <option value="Mute">Mute</option>
+                <option value="Both">Both</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="login" class="container hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="learn" class="container hidden">
+        <h2>Start Learning</h2>
+        <button id="uploadPhoto">Upload Photo</button>
+        <button id="uploadVideo">Upload Video URL</button>
+        <p id="result"></p>
+    </section>
+    <section id="game" class="container hidden">
+        <h2>Sign Language Quiz</h2>
+        <p id="question"></p>
+        <div id="optionsContainer" class="radio-options"></div>
+        <button id="submitAnswer" class="hidden">Submit Answer</button>
+        <p id="feedback"></p>
+        <p id="scoreDisplay"></p>
+        <button id="restartGame" class="hidden">Restart Game</button>
+    </section>
+
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
