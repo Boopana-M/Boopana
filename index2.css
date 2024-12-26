@@ -1,0 +1,217 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .logo-container {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+header .webpage-name {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+}
+#about,#vm{
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-top: 20px;
+
+}
+
+/* Navigation (Menu) */
+nav {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-top: 20px;
+    background-color:#4CAF50 ;
+}
+ nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-top: 20px;
+    background-color:#4CAF50 ;
+}
+
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li button {
+    background:none ;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+nav ul li button:hover {
+    color: #e0e0e0;
+}
+
+/* Content Sections */
+.container {
+    padding: 2em;
+    text-align: center;
+}
+
+.container.hidden {
+    display: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* Styling for the second header */
+.second-header {
+    background-color: #f1f1f1;  /* Light gray background */
+    padding: 1em;  /* Add padding to create space */
+    text-align: center;
+    /border-top: 2px solid #4CAF50;/  /* Optional: Add a green line at the top for separation */
+}
+
+.second-header h2 {
+    margin: 0;
+    /color: #333; Darker text for contrast
+}
+
+.second-header p {
+    color: #777; /* Lighter text color for the description */
+}
+
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form Inputs */
+form input, form select {
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 80%;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.radio-options div {
+    margin: 5px 0;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Styling for Cards and Content (If required) */
+.card {
+    
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display:inline-flex;
+    /box-shadow: 0 8px 12px rgba(4, 3, 3, 0.1);/
+    margin: 10px;
+    padding: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+}
+
+.card-info {
+    /--color: #181818;/
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+}
+
+.card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+/* Hover Effect for Card */
+.card:hover::after {
+    opacity: 0;
+}
+
+.card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+}
