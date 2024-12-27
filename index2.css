@@ -1,14 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
 }
 
-/* Header Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin:0;
+    padding:0;
+}
+
+
+/* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333;
+    color: #fff;
     padding: 1em;
     display: flex;
     align-items: center;
@@ -16,21 +26,26 @@ header {
     position: relative;
 }
 
-header .logo-container {
-    position: absolute;
-    left: 20px;
+header .logo-container img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-header .logo {
-    height: 50px; /* Adjust logo size */
-    width: auto;
+header h1 {
+    display: inline-block;
+    font-size: 2em;
+    vertical-align: middle;
 }
-
 header .webpage-name {
     font-size: 24px;
     text-align: center;
     margin: 0;
     flex-grow: 1;
+}
+header .logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
 }
 #about,#vm{
     list-style: none;
@@ -40,118 +55,129 @@ header .webpage-name {
 
 }
 
-/* Navigation (Menu) */
-nav {
-    list-style: none;
-    padding: 0;
-    text-align: right;
-    margin-top: 20px;
-    background-color:#4CAF50 ;
-}
- nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: right;
-    margin-top: 20px;
-    background-color:#4CAF50 ;
-}
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li button {
-    background:none ;
+    background: none;
     border: none;
-    color: black;
-    font-size: 16px;
+    color: #fff;
+    font-size: 1.1em;
     cursor: pointer;
-    text-decoration: underline;
 }
 
 nav ul li button:hover {
-    color: #e0e0e0;
+    text-decoration: underline;
 }
 
-/* Content Sections */
-.container {
-    padding: 2em;
-    text-align: center;
-}
-
-.container.hidden {
-    display: none;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-}
-/* Styling for the second header */
+/* Header - Second Section */
 .second-header {
-    background-color: #f1f1f1;  /* Light gray background */
-    padding: 1em;  /* Add padding to create space */
     text-align: center;
-    /border-top: 2px solid #4CAF50;/  /* Optional: Add a green line at the top for separation */
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
 }
 
-.second-header h2 {
-    margin: 0;
-    /color: #333; Darker text for contrast
+/* Section Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align:center;
 }
 
-.second-header p {
-    color: #777; /* Lighter text color for the description */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-
-/* Button Styling */
 button {
-    background-color: #4CAF50;
+    padding: 10px 15px;
+    background-color: #333;
     color: white;
     border: none;
-    padding: 0.5em 1em;
     cursor: pointer;
-    margin-top: 1em;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #555;
+}
+.container{
+    padding:2em;
+    text-align:center;
 }
 
-/* Form Inputs */
-form input, form select {
-    display: block;
-    margin: 1em auto;
-    padding: 0.5em;
-    width: 80%;
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+.container.hidden{
+    display:none;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+#learn button {
+    background-color: #555;
+    color:white;
+    border:none;
+    padding:0.5em 1em;
+    cursor:pointer;
+    margin-top:1em;
+}
+
+/* Sign Language Quiz Styles */
+#game {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#game p {
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
 .radio-options {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 10px auto;
+    gap: 10px;
 }
 
 .radio-options div {
-    margin: 5px 0;
-}
-
-.radio-options input[type="radio"] {
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 /* Styling for Cards and Content (If required) */
@@ -161,7 +187,7 @@ form input, form select {
     border: 1px solid #ddd;
     border-radius: 8px;
     display:inline-flex;
-    /box-shadow: 0 8px 12px rgba(4, 3, 3, 0.1);/
+    /*box-shadow: 0 8px 12px rgba(4, 3, 3, 0.1);*/
     margin: 10px;
     padding: 5px;
     width: 300px;
@@ -188,7 +214,7 @@ form input, form select {
 }
 
 .card-info {
-    /--color: #181818;/
+    /*--color: #181818;*/
     background: var(--color);
     color: var(--color);
     display: flex;
@@ -215,43 +241,59 @@ form input, form select {
     transition: color 1s;
 }
 
+#submitAnswer, #restartGame {
+    margin-top: 20px;
+}
+
+/* Quiz Feedback */
+#feedback {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+/* Score Display */
+#scoreDisplay {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 
 
-/* Sign Language Learning Section */
+/* Learning Section Styles */
+#signLearning {
+    margin-top: 20px;
+}
 
-
-.learning-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 2em;
+.learning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .search-bar {
-    width: 80%;
-    padding: 0.5em;
-    margin: 1em auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: block;
-}
-
-.learning-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.tab-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
+    padding: 10px;
+    width: 300px;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-.tab-btn.active {
-    background-color: #45a049;
+.learning-tabs button {
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    display:flexbox;
+}
+
+.learning-tabs button.active {
+    background-color: #333;
+    color: #fff;
+    align-items:flex-start;
 }
 
 .tab-content {
@@ -264,67 +306,93 @@ form input, form select {
 
 .lessons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    margin: 20px 0;
 }
 
 .lesson-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.lesson-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .lesson-meta {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .level {
-    background: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 5px;
 }
 
+.start-btn {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.start-btn:hover {
+    background-color: #555;
+}
+
+/* Community Post Styles */
 .community-post {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .user-info {
     display: flex;
-    align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
 .avatar {
     width: 40px;
     height: 40px;
-    background: #4CAF50;
+    background-color: #007BFF;
     color: white;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.respond-btn {
-    background-color: transparent;
-    border: 1px solid #4CAF50;
-    color: #4CAF50;
-    margin-top: 10px;
-}
-
-.respond-btn:hover {
-    background-color: #4CAF50;
+button.respond-btn {
+    background-color:#333;
     color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button.respond-btn:hover {
+    background-color:#333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
