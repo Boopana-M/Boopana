@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN IN SILENCE</title>
+    <link rel="stylesheet" href="now.css">
+</head>
+<body>
+    
+
+    <!-- Navigation (Menu) -->
+    <nav id="1stheader">
+        <ul>
+            <!--<li><button id="showHome">Home</button></li>-->
+            <li><button id="showRegister" style="color:black">Register</button></li>
+            <li><button id="showLogin" style="color:black">Login</button></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="silence.jpg" alt="Logo" class="logo">
+        </div>
+        <h1 class="webpage-name">LEARN IN SILENCE</h1>
+        <nav>
+            <ul>
+                <li><button id="about">About us</button></li>
+                <li><button id="vm">Vission/Mission</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="second-header">
+        <h2>Welcome to the Learning Platform</h2>
+        <p>Your journey to learning in silence begins here.</p>
+    </div>
+
+    <!-- Content Sections -->
+    <section id="home" class="container">
+        <h2>Welcome to LEARN IN SILENCE</h2>
+        <p>This platform empowers deaf and mute students to learn independently in their regional language.</p>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="container hidden">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <select required>
+                <option value="" disabled selected>Select Disability</option>
+                <option value="Deaf">Deaf</option>
+                <option value="Mute">Mute</option>
+                <option value="Both">Both</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="container hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn" class="container hidden">
+        <h2>Start Learning</h2>
+        <button id="uploadPhoto">Upload Photo</button>
+        <button id="uploadVideo">Upload Video URL</button>
+        <p id="result"></p>
+    </section>
+
+    <!-- Sign Language Quiz Section -->
+    <section id="game" class="container hidden">
+        <h2>Sign Language Quiz</h2>
+        <p id="question"></p>
+        <div id="optionsContainer" class="radio-options"></div>
+        <button id="submitAnswer" class="hidden">Submit Answer</button>
+        <p id="feedback"></p>
+        <p id="scoreDisplay"></p>
+        <button id="restartGame" class="hidden">Restart Game</button>
+    </section>
+
+    <!-- Sign Language Learning Section -->
+    <section id="signLearning" class="container hidden">
+        <div class="learning-container">
+            <div class="learning-header">
+                <input type="text" class="search-bar" placeholder="Search signs, lessons, or community posts..."><br>
+                <div class="learning-tabs">
+                    <button class="tab-btn active" data-tab="lessons">Learn</button><br>
+                    <button class="tab-btn" data-tab="community">Community</button>
+                </div>
+            </div>
+
+            <!-- Lessons Tab -->
+            <div id="lessons" class="tab-content active">
+                <div class="lessons-grid">
+                    <div class="lesson-card">
+                        <h3>Basic Greetings</h3>
+                        <div class="lesson-meta">
+                            <span class="level">Beginner</span>
+                            <span>3 min</span>
+                        </div>
+                        <button class="start-btn">Start Lesson</button>
+                    </div>
+                    <div class="lesson-card">
+                        <h3>Numbers 1-20</h3>
+                        <div class="lesson-meta">
+                            <span class="level">Beginner</span>
+                            <span>3 min</span>
+                        </div>
+                        <button class="start-btn">Start Lesson</button>
+                    </div>
+                </div>
+            </div>
+            <section id="cards" class="container">
+                <h2>Our Courses</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-info">
+                            <h3 class="title">Sign Language 101</h3>
+                            <p>Learn the basics of sign language with our beginner-friendly course.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <h3 class="title">Intermediate Sign Language</h3>
+                            <p>Take your sign language skills to the next level with intermediate lessons.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <h3 class="title">Advanced Sign Language</h3>
+                            <p>Master advanced sign language techniques and communication strategies.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <h3 class="title">Advanced Sign Language</h3>
+                            <p>Master advanced sign language techniques and communication strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Tab -->
+            <div id="community" class="tab-content">
+                <div class="community-post">
+                    <div class="user-info">
+                        <div class="avatar">S</div>
+                        <div>
+                            <h3>Sarah M.</h3>
+                            <span>2h ago</span>
+                        </div>
+                    </div>
+                    <p>Looking for practice partners!</p>
+                    <button class="respond-btn">Respond</button>
+                </div>
+                <div class="community-post">
+                    <div class="user-info">
+                        <div class="avatar">J</div>
+                        <div>
+                            <h3>John D.</h3>
+                            <span>5h ago</span>
+                        </div>
+                    </div>
+                    <p>Tips for learning fingerspelling?</p>
+                    <button class="respond-btn">Respond</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <br><br><footer>
+        <p>&copy; 2024 Learn in Silence. All Rights Reserved.</p>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+</html>
