@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEARN IN SILENCE</title>
-    <link rel="stylesheet" href="try+claude.css">
+    <link rel="stylesheet" href="now.css">
 </head>
 <body>
-
+    <style>
+        body {
+          background-image: url('Untitled design (2).png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
     
 
     <!-- Navigation (Menu) -->
     <nav id="1stheader">
         <ul>
             <!--<li><button id="showHome">Home</button></li>-->
-            <li><button id="showRegister">Register</button></li>
-            <li><button id="showLogin">Login</button></li>
+            <li><button id="showRegister" style="color:black">Register</button></li>
+            <li><button id="showLogin" style="color:black">Login</button></li>
         </ul>
     </nav>
 
     <!-- Header -->
     <header>
-        <div class="logo-container">
-            <!-- Add your logo image here (replace logo.png with your actual image file) -->
-            <img src="logo.png" alt="Logo" class="logo">
+        <div class="logo-container" id="effect3d">
+            <img src="learninsilence.png" alt="Logo" class="logo">
         </div>
         <h1 class="webpage-name">LEARN IN SILENCE</h1>
         <nav>
             <ul>
-                <!--<li><button id="showHome">Home</button></li>-->
                 <li><button id="about">About us</button></li>
                 <li><button id="vm">Vission/Mission</button></li>
             </ul>
         </nav>
     </header>
+    <div>
+        <center>
+            <video width="640" height="360"  loop autoplay muted> 
+                <source src="sign.mp4" type="video/mp4"> 
+                  <!-- Your browser does not support the video tag. -->
+           </video> 
+    </center>
 
     <div class="second-header">
-    <h2>Welcome to the Learning Platform</h2>
-    <p>Your journey to learning in silence begins here.</p>
-</div>
-
-    <!-- Content Sections -->
-    <section id="home" class="container">
         <h2>Welcome to LEARN IN SILENCE</h2>
         <p>This platform empowers deaf and mute students to learn independently in their regional language.</p>
-    </section>
+    </div>
 
+    <!-- Registration Section -->
     <section id="register" class="container hidden">
         <h2>Register</h2>
         <form id="registrationForm">
@@ -70,6 +69,7 @@
         </form>
     </section>
 
+    <!-- Login Section -->
     <section id="login" class="container hidden">
         <h2>Login</h2>
         <form id="loginForm">
@@ -79,6 +79,7 @@
         </form>
     </section>
 
+    <!-- Learn Section -->
     <section id="learn" class="container hidden">
         <h2>Start Learning</h2>
         <button id="uploadPhoto">Upload Photo</button>
@@ -86,6 +87,7 @@
         <p id="result"></p>
     </section>
 
+    <!-- Sign Language Quiz Section -->
     <section id="game" class="container hidden">
         <h2>Sign Language Quiz</h2>
         <p id="question"></p>
@@ -95,52 +97,26 @@
         <p id="scoreDisplay"></p>
         <button id="restartGame" class="hidden">Restart Game</button>
     </section>
-    <section id="cards" class="container">
-        <h2>Our Courses</h2>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-info">
-                    <h3 class="title">Sign Language 101</h3>
-                    <p>Learn the basics of sign language with our beginner-friendly course.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-info">
-                    <h3 class="title">Intermediate Sign Language</h3>
-                    <p>Take your sign language skills to the next level with intermediate lessons.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-info">
-                    <h3 class="title">Advanced Sign Language</h3>
-                    <p>Master advanced sign language techniques and communication strategies.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-info">
-                    <h3 class="title">Advanced Sign Language</h3>
-                    <p>Master advanced sign language techniques and communication strategies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="signLearning" class="container">
+
+    <!-- Sign Language Learning Section -->
+    <section id="signLearning" class="container hidden">
         <div class="learning-container">
             <div class="learning-header">
-                <input type="text" class="search-bar" placeholder="Search signs, lessons, or community posts...">
+                <input type="text" class="search-bar" placeholder="Search signs, lessons, or community posts..."><br>
                 <div class="learning-tabs">
-                    <button class="tab-btn active" data-tab="lessons">Learn</button>
+                    <button class="tab-btn active" data-tab="lessons">Learn</button><br>
                     <button class="tab-btn" data-tab="community">Community</button>
                 </div>
             </div>
-    
+
+            <!-- Lessons Tab -->
             <div id="lessons" class="tab-content active">
                 <div class="lessons-grid">
                     <div class="lesson-card">
                         <h3>Basic Greetings</h3>
                         <div class="lesson-meta">
                             <span class="level">Beginner</span>
-                            <span>10 min</span>
+                            <span>3 min</span>
                         </div>
                         <button class="start-btn">Start Lesson</button>
                     </div>
@@ -148,13 +124,15 @@
                         <h3>Numbers 1-20</h3>
                         <div class="lesson-meta">
                             <span class="level">Beginner</span>
-                            <span>15 min</span>
+                            <span>3 min</span>
                         </div>
                         <button class="start-btn">Start Lesson</button>
                     </div>
                 </div>
             </div>
-    
+            
+
+            <!-- Community Tab -->
             <div id="community" class="tab-content">
                 <div class="community-post">
                     <div class="user-info">
@@ -179,14 +157,40 @@
                     <button class="respond-btn">Respond</button>
                 </div>
             </div>
+            <section id="cards" class="container">
+               
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-info" id="guide">
+                            <h3 class="title" >Guidance                        <br></h3><br>
+                            <p><br>Get to know about the scholarships, benefits and many more for you </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-info" id="aware">
+                            <h3 class="title">Awareness                  <br></h3>
+                            <p><br>Come know about emergency numbers, legal procedures and so.</p>
+                        </div>
+                    </div>
+                    <div class="card" id="other">
+                        <div class="card-info">
+                            <h3 class="title">Other Resources<br></h3><br>
+                            <p><br>To know the basics and many useful tutorials</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+            
         </div>
     </section>
     
 
     <!-- Footer -->
-    <footer>
+    <br><br><footer>
         <p>&copy; 2024 Learn in Silence. All Rights Reserved.</p>
     </footer>
 
-     </body>
+    <script src="new.js"></script>
+</body>
 </html>
