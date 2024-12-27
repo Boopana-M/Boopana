@@ -1,134 +1,207 @@
-/* Body Styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     margin:0;
     padding:0;
-    background-color: #f4f4f9;
-}
-
-/* Header Styling */
-header {
-    background-color: #4CAF50;
-    color: rgb(230, 55, 12);
-    padding:1;
-    text-align: right;
-}.menu {
-    background-color: #aa2057;
-    color: white;
-    padding:1;
-    text-align:right;
-}
-p{
-    text-align: center;
-    font-family:cursive;
-    font-size :60px; ;
-}
+   
     
-.img
-{
-    background-color:var(--color);
-    float: left;
 }
-.topnav{
-    float:right;
-    padding: 20px 20px;
+
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .logo-container img {
+    width: 100px;
+    vertical-align: middle;
+    margin-right: 10px;
+    height:90px;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 2em;
+    vertical-align: middle;
+}
+header .webpage-name {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+}
+header .logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+#about,#vm{
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-top: 20px;
 
 }
-/* Navigation Buttons */
+
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: right;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li button {
     background: none;
     border: none;
-    color: white;
-    font-size: 16px;
+    color: #fff;
+    font-size: 1.1em;
     cursor: pointer;
-    text-decoration: underline;
 }
 
 nav ul li button:hover {
-    color: #e0e0e0;
+    text-decoration: underline;
 }
 
-/* Content Sections */
-.container {
-    padding: 2em;
+/* Header - Second Section */
+.second-header {
     text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
 }
 
-.container.hidden {
-    display: none;
+/* Section Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align:center;
 }
 
-/* Buttons */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
 button {
-    background-color: #4CAF50;
+    padding: 10px 15px;
+    background-color: #333;
     color: white;
     border: none;
-    padding: 0.5em 1em;
     cursor: pointer;
-    margin-top: 1em;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #555;
+}
+.container{
+    padding:2em;
+    text-align:center;
 }
 
-/* Form Inputs */
-form input, form select {
-    display: block;
-    margin: 1em auto;
-    padding: 0.5em;
-    width: 80%;
+/* Hidden Elements */
+.hidden {
+    display: none;
 }
+.container.hidden{
+    display:none;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+#learn button {
+    background-color: #555;
+    color:white;
+    border:none;
+    padding:0.5em 1em;
+    cursor:pointer;
+    margin-top:1em;
+}
+
+/* Sign Language Quiz Styles */
+#game {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#game p {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
 .radio-options {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 10px auto;
+    gap: 10px;
 }
 
 .radio-options div {
-    margin: 5px 0;
+    display: flex;
+    align-items: center;
 }
 
-.radio-options input[type="radio"] {
-    margin-right: 10px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    margin-top: 1em;
-}
-
-
-  /* From Uiverse.io by alexruix */ 
+/* Styling for Cards and Content (If required) */
 .card {
-    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
-    width: 190px;
-    height: 254px;
-    padding: 5px;
-    border-radius: 1rem;
-    overflow: visible;
-    background: #f7ba2b;
-    background: var(--background);
-    position: relative;
-    z-index: 1;
-   }
-   
-   .card::after {
+    
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display:flex;
+    /*box-shadow: 0 8px 12px rgba(4, 3, 3, 0.1);*/
+    margin: 10px;
+    padding: 20px;
+    width: 700px;
+    height:200px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+
+.card::after {
     position: absolute;
     content: "";
     top: 30px;
@@ -142,10 +215,10 @@ button {
     background: #f7ba2b;
     background: var(--background);
     transition: opacity .5s;
-   }
-   
-   .card-info {
-    --color: #181818;
+}
+
+.card-info {
+    /*--color: #181818;*/
     background: var(--color);
     color: var(--color);
     display: flex;
@@ -155,22 +228,182 @@ button {
     height: 100%;
     overflow: visible;
     border-radius: .7rem;
-   }
-   
-   .card .title {
+}
+
+/*.card .title {
     font-weight: bold;
     letter-spacing: .1em;
-   }
-   
-   /*Hover*/
-   .card:hover::after {
+}*/
+
+/* Hover Effect for Card */
+.card:hover::after {
     opacity: 0;
-   }
-   
-   .card:hover .card-info {
+}
+
+/*.card:hover .card-info {
     color: #f7ba2b;
     transition: color 1s;
-   }
-   
+}*/
+
+#submitAnswer, #restartGame {
+    margin-top: 20px;
 }
+
+/* Quiz Feedback */
+#feedback {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+/* Score Display */
+#scoreDisplay {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* Learning Section Styles */
+#signLearning {
+    margin-top: 20px;
+}
+
+.learning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.learning-tabs button {
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    display:flexbox;
+}
+
+.learning-tabs button.active {
+    background-color: #333;
+    color: #fff;
+    align-items:flex-start;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.lesson-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.lesson-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.lesson-meta {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.level {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+.start-btn {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.start-btn:hover {
+    background-color: #555;
+}
+
+/* Community Post Styles */
+.community-post {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+button.respond-btn {
+    background-color:#333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button.respond-btn:hover {
+    background-color:#333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#effect3d { animation-name: effect3d }
+@keyframes effect3d {
+    to {
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15)
+    }
 }
